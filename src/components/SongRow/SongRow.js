@@ -19,3 +19,5 @@ const SongRow = ({ track }) => {
     </div>
   )
 }
+
+export default SongRow
