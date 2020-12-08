@@ -1,10 +1,10 @@
-import React from "react"
-import ReactDOM from "react-dom"
-import "./index.css"
-import { DataLayer } from "./context/DataLayer"
-import App from "./App"
-import * as serviceWorker from "./serviceWorker"
-import reducer, { initialState } from "./context/Reducer"
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import { DataLayer } from './context/DataLayer'
+import App from './App'
+import * as serviceWorker from './serviceWorker'
+import reducer, { initialState } from './context/Reducer'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,7 +12,7 @@ ReactDOM.render(
       <App />
     </DataLayer>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 )
 
 serviceWorker.unregister()
