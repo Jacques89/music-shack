@@ -37,7 +37,7 @@ const App = () => {
             playlists,
           })
         })
-        spotify.getPlaylist().then(playlist => {
+        spotify.getPlaylist('37i9dQZF1E34Ucml4HHx1w').then(playlist => {
           dispatch({
             type: 'SET_DISCOVER_WEEKLY',
             discover_weekly: playlist,
