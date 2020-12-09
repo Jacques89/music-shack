@@ -2,7 +2,7 @@ import React from 'react'
 import './Player.scss'
 import Sidebar from '../Sidebar/Sidebar'
 import Body from '../Body/Body'
-import Footer from '../Footer'
+import Footer from '../Footer/Footer'
 
 const Player = ({ spotify }) => {
   return(

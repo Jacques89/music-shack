@@ -44,6 +44,7 @@ const App = () => {
           })
         })
     }
+    console.log(_token)
   }, [])
 
   return (
