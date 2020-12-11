@@ -15,7 +15,7 @@ const Body = ({ spotify }) => {
       <Header spotify={spotify} />
       <div className='body__info'>
         <img 
-          src={discover_weekly?.images[0]?.url}
+          // src={discover_weekly?.images[0]?.url}
           alt=''
         />
         <div className='body__infoText'>

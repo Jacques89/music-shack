@@ -2,6 +2,8 @@ export const initialState = {
   user: null,
   token: null,
   playlists: [],
+  discover_weekly: null,
+  top_artists: null,
   playing: false,
   item: null
 }

@@ -1,10 +1,12 @@
 .body {
+  padding: 30px;
+  width: 100%;
   height: 100vh;
+  overflow-y: overlay;
   flex: 0.8;
   color: white;
-  padding: 30px;
-  background: linear-gradient(rgb(91, 87, 115), rgba(0, 0, 0, 1));
-  overflow-y: overlay;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 1));
+  background-color: rgb(91, 87, 115);
 
   &::-webkit-scrollbar {
     display: none;
@@ -39,6 +41,7 @@
 .body__icons {
   display: flex;
   align-items: center;
+  margin-left: 38px;
 
   .MuiSvgIcon-root {
     margin-right: 20px;
@@ -51,7 +54,7 @@
   margin-top: 20;
   margin-bottom: 20px;
 
-  &::hover {
+  &:hover {
     transition: 100ms transform ease-in;
     transform: scale(1.08);
   }
