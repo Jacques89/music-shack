@@ -26,11 +26,11 @@ const Footer = () => {
         </div>
       </div>
       <div className='footer__center'>
-        <Shuffle classname='footer__green' />
+        <Shuffle className='footer__green' />
         <SkipPrevious className='footer__icon' />
         <PlayCircleOutline fontSize='large' className='footer__icon' />
-        <SkipNext classname='footer__icon' />
-        <Repeat classname='footer__green' />
+        <SkipNext className='footer__icon' />
+        <Repeat className='footer__green' />
       </div>
       <div className='footer__right'>
         <Grid container spacing={2}>

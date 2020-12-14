@@ -12,6 +12,7 @@ const App = () => {
   const [{ token }, dispatch] = useDataLayerValue()
 
   useEffect(() => {
+    // Set the token
     const hash = getTokenFromUrl()
     window.location.hash = ''
     const _token = hash.access_token
@@ -22,28 +23,35 @@ const App = () => {
         type: 'SET_TOKEN',
         token: _token
       })
-      console.log('token', _token)
-      spotify.getMe()
-        .then(user => {
-          dispatch({
-            type: 'SET_USER',
-            user,
-          })
+      spotify.getPlaylist('3cEYpjA9oz9GiPac4AsH4n').then(response => {
+        dispatch({
+          type: 'SET_DISCOVER_WEEKLY',
+          discover_weekly: response,
         })
-        spotify.getUserPlaylists().then(playlists => {
-          dispatch({
-            type: 'SET_PLAYLISTS',
-            playlists,
-          })
+      })
+      spotify.getMyTopArtists().then(response => {
+        dispatch({
+          type: 'SET_TOP_ARTISTS',
+          top_artists: response,
         })
-        spotify.getPlaylist('3cEYpjA9oz9GiPac4AsH4n').then(playlist => {
-          dispatch({
-            type: 'SET_DISCOVER_WEEKLY',
-            discover_weekly: playlist,
-          })
+      })
+      dispatch({
+        type: 'SET_SPOTIFY',
+        spotify: spotify,
+      })
+      spotify.getMe().then(user => {
+        dispatch({
+          type: 'SET_USER',
+          user,
         })
+      })
+      spotify.getUserPlaylists().then(playlists => {
+        dispatch({
+          type: 'SET_PLAYLISTS',
+          playlists,
+        })
+      })
     }
-    console.log(_token)
   }, [token, dispatch])
 
   return (

@@ -52,12 +52,14 @@
   &:hover {
     transition: transform 0.2 ease-in;
     transform: scale(1.2) !important;
+    cursor: pointer;
   }
 }
 
-.footer__icon::hover {
+.footer__icon:hover {
   transition: transform 0.2 ease-in;
   transform: scale(1.2) !important;
+  cursor: pointer;
 }
 
 .footer__songInfo {
