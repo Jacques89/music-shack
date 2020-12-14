@@ -4,7 +4,7 @@ import './Header.scss'
 import { Avatar } from '@material-ui/core'
 import { useDataLayerValue } from '../../context/DataLayer'
 
-const Header = () => {
+const Header = ({ spotify }) => {
   const [{ user }, dispatch] = useDataLayerValue()
 
   return(

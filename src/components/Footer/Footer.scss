@@ -1,12 +1,12 @@
 .footer {
   position: fixed;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   bottom: 0;
-  height: 65px;
-  width: 100%;
-  background-color: #282828;
   padding: 20px;
+  height: 55px;
+  width: 97%;
+  background-color: #282828;
 }
 
 .footer__left {
@@ -34,7 +34,7 @@
   justify-content: space-between;
   color: white;
 
-  &.MuiSlider-root {
+  .MuiSlider-root {
     color: #1ed15e;
   }
 }

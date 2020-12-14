@@ -55,8 +55,9 @@ const App = () => {
   }, [token, dispatch])
 
   return (
-    <div className="App">
-      {token ? <Player spotify={spotify} /> : <Login />}
+    <div className='App'>
+      {!token && <Login />}
+      {token && <Player spotify={spotify} /> }
     </div>
   )
 }
